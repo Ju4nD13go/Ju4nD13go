@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Cargando...</title>
+    <style>
+        body {
+            background-color: pink;
+            color: white;
+            text-align: center;
+            font-family: "Pacifico", cursive;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .loader {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .loader-text {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        
+        .loader-gif {
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="loader">
+        <p class="loader-text">Cargando pagina para ti Sunshine...</p>
+        <img class="loader-gif" src="gif/cartoon-snail-loading-loading-gif-animation_2734139.png!bw700" alt="">
+    </div>
+
+    <script>
+        // Simula un tiempo de carga (puede ajustarse según tus necesidades)
+        setTimeout(() => {
+            const loader = document.querySelector(".loader");
+            loader.style.display = "none";
+            
+            const button = document.createElement("button");
+            button.textContent = "Ver Propuesta";
+              button.onclick = () => {
+                window.location.href = "Main.html"; // Cambia "propuesta.html" por la URL de tu página de propuesta
+            };
+            
+            function applyRomanticDesign() {
+            button.style.backgroundColor = '#FF4081';
+            button.style.color = 'white';
+            button.style.border = '2px solid #FF4081';
+            button.style.fontWeight = 'bold';
+        
+        }
+
+        // Llama a la función para aplicar el diseño romántico al botón
+        applyRomanticDesign();
+          
+            
+            document.body.appendChild(button);
+        }, 6000); // Ejemplo de 3 segundos de carga
+    </script>
+</body>
+</html>

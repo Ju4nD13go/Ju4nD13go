@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>LUISA RODRIGUEZ, ¿QUIERES SER MI NOVIA?</title>
+    <style>
+        body {
+            background-color: #f9f1f1;
+            text-align: center;
+            font-family: "Pacifico", cursive;
+        }
+
+        h1 {
+            color: #e91e63;
+        }
+
+        .container {
+            margin: 20px;
+        }
+
+        #si-button {
+            background-color: #e91e63;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #no-button {
+            background-color: #c4c4c4;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            position: absolute;
+        }
+
+        #letter-container {
+            width: 80%;
+            max-width: 600px;
+            height: 100px;
+            margin: 20px auto;
+            padding: 10px;
+            resize: none;
+            display: none;
+        }
+
+
+        #image-container {
+            margin: 20px auto;
+            display: none;
+           
+        }
+
+        #user-image {
+            max-width: 100%;
+            max-height: 350px;
+            border-radius: 15%;
+        }
+        
+    </style>
+</head>
+
+<body>
+
+    <h1>LUISA RODRIGUEZ, ¿QUIERES SER MI NOVIA?</h1>
+
+    <div class="container">
+        <button id="si-button">Sí</button>
+        <button id="no-button">No</button>
+    </div>
+
+ <div id="image-container">
+        <img id="user-image" src="Img/My sunshine...png" alt="Imagen de Luisa Rodriguez">
+    </div>
+
+    <div id="letter-container">
+        <div id="heart-container"></div>
+        <p>GRACIAS POR ACEPTAR SER MI NOVIA, AHORA LEE ESTO:<br>
+            <br>
+            Espero estas palabras encuentren su camino hacia tu corazon con el mismo amor con la que los estoy escribiendo JAJAJAJA mucho sentimiento para ti Sunshine. <br>
+            <br>
+            Tu ya sabes que desde el momento en que te conoci e interactue contigo, no puedo decir que me gustaste desde el primer momento JAJAJA porque estaria mintiendo, mientras te fui conociendo me fuiste conquistando con ese dulzura de personalidad que tienes, con tu hermoso fisico para mi eres tu el significado de perfeccion, la verdad no encuentro explicaciones para todo el sentimiento que tengo hacia ti JAJAJA si son mis propias palabras, de verdad LUISA MARIA ROGRIGUEZ me tenes loco, a pesar de todas las peleas, problemas pequeños y mal entendidos que hemos tenido, siempre quiero estar en comunicacion contigo, muy pendiente a ti, siempre quiero estar apoyandote aunque no este muy de acuerdo con algunas cosas siempre estare alli para ti.<br>
+            <br>
+            JAJAJA toy llorando T-T naah mentiras, cada vez que tu sonries, el mundo parece un lugar mejor tu resplandor con ese carisma que tiene, esa alegria y amabilidad, Vee mejor dicho todo de usted me han logrado conquistar, ganoso de que tu pensaras lo mismo de mi JAJAJAJA T-T. <br>
+            <br> USTED NI SE IMAGINA CUANTO TE QUIERO.
+        </p>
+    </div>
+    
+   
+
+    <script>
+        const noButton = document.getElementById('no-button');
+        const siButton = document.getElementById('si-button');
+        const letterContainer = document.getElementById('letter-container');
+        const imageContainer = document.getElementById('image-container');
+
+        function moveNoButton() {
+            const maxX = window.innerWidth - noButton.clientWidth;
+            const maxY = window.innerHeight - noButton.clientHeight;
+
+            const randomX = Math.random() * maxX;
+            const randomY = Math.random() * maxY;
+
+            noButton.style.left = randomX + 'px';
+            noButton.style.top = randomY + 'px';
+        }
+
+        function showLetterAndImage() {
+            letterContainer.style.display = 'block';
+            imageContainer.style.display = 'block';
+        }
+
+        noButton.addEventListener('mouseenter', moveNoButton);
+        siButton.addEventListener('click', showLetterAndImage);
+    </script>
+</body>
+</html>
